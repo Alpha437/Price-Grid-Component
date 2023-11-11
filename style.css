@@ -1,0 +1,153 @@
+/* || RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-light: hsl(179, 59%, 47%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+
+  /* || Fonts */
+  --fs: 1rem;
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+/* || GENERAL STYLES */
+body {
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+  font-family: 'Karla', sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 80%;
+}
+
+.join {
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.join-title {
+  color: var(--cyan);
+}
+
+.highlight {
+  color: var(--bright-yellow);
+  font-weight: var(--fw-bold);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.details {
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+}
+
+.subscription {
+  padding: 1rem;
+  background-color: var(--cyan);
+}
+
+.subscription-title {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.subscription-amount {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 .5rem;
+}
+
+.price {
+  font-weight: var(--fw-bold);
+  color: white;
+  font-size: 2rem;
+}
+
+.duration {
+  color: var(--light-gray);
+  opacity: 0.7;
+  margin-left: .5rem;
+}
+
+.subscription-details {
+  color: var(--light-gray);
+}
+
+.subscription-action {
+  background-color: var(--bright-yellow);
+  border: none;
+  padding: 1rem 5.2rem;
+  margin-top: 1rem;
+  color: white;
+  font-weight: var(--fw-bold);
+  border-radius: .5rem;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.178);
+}
+
+.extras {
+  background-color: var(--cyan-light);
+  padding: 1rem;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.extras-title {
+  color: white;
+  /* font-size: 1.5rem; */
+}
+
+.extras-list {
+  list-style: none;
+  color: var(--light-gray);
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1.3fr;
+    max-width: 650px;
+  }
+  .join, .subscription, .extras {
+    padding: 2rem 2.5rem;
+  }
+  .join {
+    grid-column: span 2;
+  }
+  .subscription {
+    border-radius: 0 0 0 .5rem;
+  }
+  .subscription-action {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 3rem;
+  }
+  .extras {
+    border-radius: 0 0 .5rem 0;
+  }
+}
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
