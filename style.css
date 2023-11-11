@@ -34,6 +34,8 @@ body {
 .container {
   display: grid;
   width: 80%;
+  border-radius: .5rem;
+  box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.178);
 }
 
 .join {
@@ -109,7 +111,6 @@ body {
 
 .extras-title {
   color: white;
-  /* font-size: 1.5rem; */
 }
 
 .extras-list {
@@ -138,6 +139,11 @@ body {
     width: 100%;
     padding: 1rem 0;
     margin-top: 3rem;
+    cursor: pointer;
+  }
+  .subscription-action:hover {
+    color: var(--bright-yellow);
+    background-color: white;
   }
   .extras {
     border-radius: 0 0 .5rem 0;
